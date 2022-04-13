@@ -1,15 +1,15 @@
-from flask import Flask,     rendertemplate
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app("/")
-def home ():
-    return rendertemplate("home.html")
+@app.route("/")
+def home():
+    return render_template("home.html")
 
-@app("/about")
-def about ():
-    return rendertemplate("about.html")
+@app.route("/about")
+def about():
+    return render_template("about.html")
 
-@app("/contact")
-def contact ():
-    return rendertemplate("contact.html")
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
